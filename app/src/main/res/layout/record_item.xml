@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/record_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/grey_80"
+    android:orientation="vertical" >
+
+    <View style="@style/view_boder_h" />
+
+    <LinearLayout
+        android:id="@id/record"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <View style="@style/view_boder_v" />
+
+        <TextView
+            android:id="@id/attribute_name"
+            style="@style/view_title_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0" />
+
+        <View style="@style/view_row_v" />
+
+        <TextView
+            android:id="@id/attribute_type"
+            style="@style/view_title_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <View
+            style="@style/view_row_v"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@id/attribute_value"
+            style="@style/view_title_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:editable="true" />
+
+        <View style="@style/view_boder_v" />
+    </LinearLayout>
+
+    <View style="@style/view_boder_h" />
+
+</LinearLayout>

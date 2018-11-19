@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bk_gray_trans_blod"
+    android:orientation="vertical"
+    android:paddingBottom="4.0dip"
+    android:paddingLeft="12.0dip"
+    android:paddingRight="12.0dip"
+    android:paddingTop="4.0dip"
+    android:scrollbars="none"
+    android:weightSum="1.0" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0.0dip"
+        android:layout_marginBottom="3.0dip"
+        android:layout_weight="1.01"
+        android:orientation="vertical"
+        android:paddingLeft="8.0dip"
+        android:paddingRight="8.0dip"
+        android:weightSum="0.8" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/filter_blank"
+            android:gravity="center_vertical"
+            android:text="收藏夹"
+            android:textColor="@color/black"
+            android:textSize="20.0dip"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@id/lst_fav"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="#00000000"
+                android:divider="@color/black_trans"
+                android:dividerHeight="0.5dip"
+                android:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@id/btn_back"
+            style="@style/ButtonOK"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="@string/ctl_back"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@id/btn_select_all"
+            style="@style/ButtonOK"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="全选"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@id/btn_select_changed"
+            style="@style/ButtonOK"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="反选"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@id/btn_un_select_all"
+            style="@style/ButtonOK"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="全不选"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@id/btn_draw"
+            style="@style/ButtonOK"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="手动绘制"
+            android:visibility="visible" />
+        
+        <Button
+            android:id="@id/btn_edit"
+            style="@style/ButtonOK"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="编辑"
+            android:visibility="visible" />
+        
+        <Button
+            android:id="@id/btn_delete"
+            style="@style/ButtonOK"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="删除"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@id/btn_okr"
+            style="@style/ButtonOK"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="返回"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</LinearLayout>

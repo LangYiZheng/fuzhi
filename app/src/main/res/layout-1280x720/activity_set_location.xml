@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_80"
+    android:paddingBottom="5.0dip"
+    android:paddingLeft="11.0dip"
+    android:paddingRight="11.0dip"
+    android:paddingTop="3.0dip" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/filter_blank"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/txt_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="格式:" />
+
+            <RadioGroup
+                android:id="@id/rb_select_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@id/rb_dufenmiao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="度分秒"
+                    android:textColor="@color/black" />
+
+                <RadioButton
+                    android:id="@id/rb_du"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:text="度"
+                    android:textColor="@color/black" />
+
+                <RadioButton
+                    android:id="@id/rb_meter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:text="米"
+                    android:textColor="@color/black" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2.0dip"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@id/ll_dufenmiao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/filter_blank"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="要定位的经纬度: "
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:padding="2.0dip" >
+
+                            <TextView
+                                style="@style/txt_content"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="经度: " />
+
+                            <EditText
+                                android:id="@id/et_lon_right_value_du"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:gravity="center"
+                                android:hint="度"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberSigned|numberDecimal"
+                                android:minEms="4" />
+
+                            <TextView
+                                style="@style/txt_little"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="度" />
+
+                            <EditText
+                                android:id="@id/et_lon_right_value_fen"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:gravity="center"
+                                android:hint="分"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:minEms="4" />
+
+                            <TextView
+                                style="@style/txt_little"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="分" />
+
+                            <EditText
+                                android:id="@id/et_lon_right_value_miao"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:gravity="center"
+                                android:hint="秒"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:minEms="4" />
+
+                            <TextView
+                                style="@style/txt_little"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="秒" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:padding="2.0dip" >
+
+                            <TextView
+                                style="@style/txt_content"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="纬度: " />
+
+                            <EditText
+                                android:id="@id/et_lat_right_value_du"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:gravity="center"
+                                android:hint="度"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberSigned|numberDecimal"
+                                android:minEms="4" />
+
+                            <TextView
+                                style="@style/txt_little"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="度" />
+
+                            <EditText
+                                android:id="@id/et_lat_right_value_fen"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:gravity="center"
+                                android:hint="分"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:minEms="4" />
+
+                            <TextView
+                                style="@style/txt_little"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="分" />
+
+                            <EditText
+                                android:id="@id/et_lat_right_value_miao"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:gravity="center"
+                                android:hint="秒"
+                                android:imeOptions="actionDone"
+                                android:inputType="number"
+                                android:minEms="4" />
+
+                            <TextView
+                                style="@style/txt_little"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="秒" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@id/ll_du"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/ll_dufenmiao"
+                    android:layout_alignLeft="@id/ll_dufenmiao"
+                    android:layout_alignRight="@id/ll_dufenmiao"
+                    android:layout_alignTop="@id/ll_dufenmiao"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/filter_blank"
+                        android:orientation="vertical"
+                        android:visibility="visible" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="要定位的经纬度: "
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:padding="2.0dip" >
+
+                            <TextView
+                                style="@style/txt_content"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="经度: " />
+
+                            <EditText
+                                android:id="@id/et_lon_right_value"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:gravity="center"
+                                android:hint="经度"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal" />
+
+                            <TextView
+                                style="@style/txt_little"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="度" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:padding="2.0dip" >
+
+                            <TextView
+                                style="@style/txt_content"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="纬度: " />
+
+                            <EditText
+                                android:id="@id/et_lat_right_value"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:gravity="center"
+                                android:hint="纬度"
+                                android:imeOptions="actionDone"
+                                android:inputType="numberDecimal" />
+
+                            <TextView
+                                style="@style/txt_little"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="度" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@id/ll_meter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/ll_dufenmiao"
+                    android:layout_alignLeft="@id/ll_dufenmiao"
+                    android:layout_alignRight="@id/ll_dufenmiao"
+                    android:layout_alignTop="@id/ll_dufenmiao"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/filter_blank"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="要定位的经纬度: "
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:padding="2.0dip" >
+
+                            <TextView
+                                style="@style/txt_content"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" X  =  " />
+
+                            <EditText
+                                android:id="@id/et_meter_x"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:gravity="center"
+                                android:hint="米"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal"
+                                android:minEms="4" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:padding="2.0dip" >
+
+                            <TextView
+                                style="@style/txt_content"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" Y  =  " />
+
+                            <EditText
+                                android:id="@id/et_meter_y"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:gravity="center"
+                                android:hint="米"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal"
+                                android:minEms="4" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2.0dip"
+            android:background="@drawable/filter_blank"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0" >
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0" />
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0" >
+
+                    <Button
+                        android:id="@id/btn_get_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minEms="4"
+                        android:text="定位" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0" >
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0" />
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0" >
+
+                    <Button
+                        android:id="@id/btn_cancel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minEms="4"
+                        android:text="@string/cancel" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

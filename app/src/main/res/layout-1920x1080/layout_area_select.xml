@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/tran" android:layout_width="wrap_content" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/vg_area_content" android:background="@color/bk_gray_trans" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1.0">
+        <RelativeLayout android:background="@color/bk_gray_trans_blod" android:layout_width="wrap_content" android:layout_height="35dp">
+            <LinearLayout android:orientation="horizontal" android:id="@id/vg_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentRight="true">
+                <ImageButton android:id="@id/btn_query" android:background="@drawable/bk_narmal_1" android:padding="2.0dip" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@android:drawable/ic_menu_search" />
+            </LinearLayout>
+            <HorizontalScrollView android:id="@id/scroll_h_view" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_toLeftOf="@id/vg_right" android:layout_alignTop="@id/vg_right" android:layout_alignBottom="@id/vg_right" android:layout_alignParentLeft="true">
+                <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="match_parent">
+                    <TextView android:id="@id/cantonzone_txt_01" android:background="@drawable/bk_narmal_1" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="第一级" android:drawableRight="@drawable/icon_right_row_gray" style="@style/txt_menu" />
+                    <TextView android:id="@id/cantonzone_txt_02" android:background="@drawable/bk_narmal_1" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="第二级" android:drawableRight="@drawable/icon_right_row_gray" style="@style/txt_menu" />
+                    <TextView android:id="@id/cantonzone_txt_03" android:background="@drawable/bk_narmal_1" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="第三级" android:drawableRight="@drawable/icon_right_row_gray" style="@style/txt_menu" />
+                    <TextView android:id="@id/cantonzone_txt_04" android:background="@drawable/bk_narmal_1" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="第四级" android:drawableRight="@drawable/icon_right_row_gray" style="@style/txt_menu" />
+                </LinearLayout>
+            </HorizontalScrollView>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/vg_query" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/vg_right" android:layout_alignTop="@id/vg_right" android:layout_alignBottom="@id/vg_right" android:layout_alignParentLeft="true">
+                <Button android:layout_gravity="center" android:id="@id/btn_start_query" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="查询" />
+                <ImageButton android:id="@id/btn_query_setting" android:background="@drawable/bk_narmal_1" android:padding="2.0dip" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@android:drawable/ic_menu_manage" />
+                <EditText android:id="@id/et_query" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="请输入要查询的关键字" android:singleLine="true" android:layout_weight="1.0" android:imeOptions="actionSearch" />
+            </LinearLayout>
+        </RelativeLayout>
+        <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:id="@id/vg_lst_area" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent">
+                <Button android:gravity="center" android:id="@id/btn_refresh" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="刷新" />
+                <ListView android:layout_gravity="center" android:id="@id/lst_datas" android:layout_width="match_parent" android:layout_height="match_parent" android:cacheColorHint="@null" android:divider="@color/bk_gray_trans_2" android:dividerHeight="0.5dip" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/vg_lst_query" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+                <ExpandableListView android:id="@id/lst_datas_full_text" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent" android:cacheColorHint="@null" android:divider="@color/bk_gray_trans_2" android:dividerHeight="0.5dip" />
+                <LinearLayout android:orientation="vertical" android:id="@id/vg_lst_show_details" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent">
+                    <LinearLayout android:orientation="horizontal" android:id="@id/vg_lst_show_details_top_control" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <Button android:id="@id/btn_pre" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="上一个" android:layout_weight="2.0" />
+                        <Button android:id="@id/btn_info" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="1/1" android:layout_weight="1.0" />
+                        <Button android:id="@id/btn_next" android:layout_width="0.0dip" android:layout_height="match_parent" android:text="下一个" android:layout_weight="2.0" />
+                    </LinearLayout>
+                    <ListView android:id="@id/lst_datas_child_details" android:layout_width="match_parent" android:layout_height="match_parent" android:cacheColorHint="@null" android:divider="@color/bk_gray_trans_2" android:dividerHeight="0.5dip" android:layout_weight="1.0" />
+                    <Button android:id="@id/btn_go_back_to_group" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="返    回" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/vg_lst_query_setting" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+<!--                 <include android:layout_width="match_parent" android:layout_height="match_parent" layout="@layout/layout_layer_query_seting" /> -->
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+<!--     <LinearLayout android:gravity="center" android:id="@id/vg_expand" android:layout_width="wrap_content" android:layout_height="match_parent"> -->
+<!--         <LinearLayout android:id="@id/vg_expand" android:background="@drawable/bk_corner_1" android:paddingLeft="4.0dip" android:paddingTop="8.0dip" android:paddingRight="4.0dip" android:paddingBottom="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"> -->
+<!--             <ImageButton android:id="@id/imageButton1" android:background="@drawable/bk_ex_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" /> -->
+<!--         </LinearLayout> -->
+<!--     </LinearLayout> -->
+</LinearLayout>

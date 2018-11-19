@@ -1,0 +1,3 @@
+F:/fuzhi/app/.externalNativeBuild/cmake/release/x86/CMakeFiles/native-lib.dir
+F:/fuzhi/app/.externalNativeBuild/cmake/release/x86/CMakeFiles/edit_cache.dir
+F:/fuzhi/app/.externalNativeBuild/cmake/release/x86/CMakeFiles/rebuild_cache.dir

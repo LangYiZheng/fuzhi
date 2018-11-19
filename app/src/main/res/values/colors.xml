@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<!-- Text -->
+    <color name="dark_textcolor">#ff373737</color>
+	<color name="textcolor">#ffd5ddeb</color>
+    <color name="mediumdark_textcolor">#ff707070</color>
+    <color name="white_textcolor">#ffe2e2e2</color>
+    <color name="maptext_textcolor">#ffffffff</color>
+    
+    <color name="listview_divider">#66B5C6DC</color>
+    <color name="focused_item_background">#7fff0000</color>
+	<color name="dialog_stroke">#ffededed</color>
+	
+    <color name="app_background">#ff151515</color>
+    <color name="light_app_background">#ffffffff</color>
+    <color name="actionbar_color">#00323131</color>
+    <color name="layout_background">#df323131</color>
+    
+    <color name="button_default_color">#bf2c5cbc</color>
+    <color name="button_default_stroke">#df2c5cbc</color>
+    
+    <color name="delete_default_color1">#fffe0404</color>
+    <color name="delete_default_color2">#ffad0404</color>
+    <color name="delete_pressed_color">#7F454545</color>
+    
+    <color name="button_disabled_color">#7f515151</color>
+    <color name="button_disabled_stroke">#7F202020</color>
+    
+    <color name="button_pressed_color1">#ffff8c04</color>
+    <color name="button_pressed_color2">#ffff7300</color>
+    <color name="button_pressed_stroke">#7Fecb37a</color>
+    
+    <color name="edit_pressed_color">#7f323131</color>
+    
+    <color name="widget_stroke">#7F282828</color>
+    
+    <color name="divider_color">#7FEEEEEE</color>
+    <color name="divider_color2">#006e6e6e</color>
+    
+    <color name="map_button_pressed_color1">#dfff8c04</color>
+    <color name="map_button_pressed_color2">#dfff7300</color>
+    
+	<color name="map_areas_color">#ee0bf2</color>
+	<color name="area_color">#ffff7300</color>
+	
+	<color name="sketch_background_line_color">#ffffffff</color>
+	<color name="sketch_vertex_background_color">#ffffffff</color>
+	<color name="sketch_vertex_stroke_color">#ffd06003</color>
+	
+	<color name="laser_line_color">#ffcc00ff</color>
+	<color name="laser_background_line_color">#FFFFFFFF</color>
+	
+    <color name="zoom_button_color">#bf2c5cbc</color>
+    <color name="zoom_button_stroke">#df2c5cbc</color>
+    
+    <!-- Seek -->
+    <color name="seek_color">#bfb1b1b1</color>
+    <color name="seek_color2">#bf303030</color>
+    <color name="seek_stroke">#bfe2e2e2</color>
+    <color name="thumb_color">#ffb1b1b1</color>
+    <color name="thumb_color2">#ff303030</color>
+    
+    
+    <color name="red">#ffff0000</color>
+    <color name="orange">#ffffa500</color>
+    <color name="yellow">#ffffff00</color>
+    <color name="green">#ff00ff00</color>
+    <color name="cyan">#ff00ffff</color>
+    <color name="blue">#ff0000ff</color>
+    <color name="purple">#ff800080</color>
+    <color name="drop_target_color">#00000000</color>
+    <color name="drop_target_enabled">#2255ff33</color>
+    <color name="drop_target_disabled">#22ff5566</color>
+    <color name="black">#ff000000</color>
+    <color name="black_trans">#64000000</color>
+    <color name="black_trans_2">#32000000</color>
+    <color name="white">#ffffffff</color>
+    <color name="bk_main">#993297fd</color>
+    <color name="bk_main_title">#993297fd</color>
+    <color name="little_grey">#ffdcdcdc</color>
+    <color name="bk_gray_trans">#55dcdcdc</color>
+    <color name="bk_gray_trans_blod">#aaaaaaaa</color>
+    <color name="bk_gray_trans_2">#aadcdcdc</color>
+    <color name="bk_gray_trans_2_selected">#77ffa500</color>
+    <color name="light_grey">#ffd3d3d3</color>
+    <color name="sliver">#ffc0c0c0</color>
+    <color name="sliver2">#eec0c0c0</color>
+    <color name="roctec_red">#ffb22222</color>
+    <color name="mgz">#ffbc8f8f</color>
+    <color name="setting_titlebar">#ff734517</color>
+    <color name="off_white">#80ffffff</color>
+    <color name="near_white">#fffdfefb</color>
+    <color name="little_white">#fff5f5f5</color>
+    <color name="shadow_black">#22ffffff</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="grey_80">#ff808080</color>
+    <color name="solid_red">#ffff0000</color>
+    <color name="solid_blue">#ff0000ff</color>
+    <color name="solid_green">#ff00ff00</color>
+    <color name="solid_yellow">#ffffff00</color>
+    <color name="color_area">#ffeefaff</color>
+    <color name="android_green">#ffa4c639</color>
+    <color name="soft_blue">#dd6495ed</color>
+    <color name="gray">#ffe0e0e0</color>
+    <color name="txt_general_bg">#333333</color>  
+    <color name="bg1">#CCCCCC</color>
+    <color name="t_bg1">#333333</color>
+    <color name="hall_b_s">#00F6D9AF</color>
+ 	<color name="hall_b_e">#00D9AF6D</color>
+ 	<color name="hall_top_s">#5A555A</color>
+ 	<color name="chat_target">#FF8000</color>
+ 	<color name="menu_bg">#ff54acea</color>
+ 	<color name="menu_select">#ffffff</color>
+ 	<color name="txt_addion_hasmsg">#ffffff</color>
+ 	<color name="txt_addion_nomsg">#000000</color>
+ 	<color name="list_divider_meetingcreate">#999999</color>
+ 	 <color name="solid_black">#ff000000</color>
+    <color name="solid_white">#ffffffff</color>
+    <color name="bg_blue">#FF1BA1E2</color>
+    <color name="toolbox_bg">#99aaaaaa</color>
+    <color name="dancen">#CCCC33</color>
+ 	<drawable name="user_moble_click">#E099CCFF</drawable>
+ 	<drawable name="user_moble_normal">#E0efefef</drawable>
+ 	<drawable name="user_addiontion_normal">#00000000</drawable>
+ 	<drawable name="meeting_tab_normal">#B3DBF8</drawable>
+ 	<drawable name="meeting_tab_pressed">#FF9933</drawable>
+ 	<drawable name="main_head">#6699CC</drawable>
+ 	<color name="trans">#00000000</color>
+ 	<color name="trans_white">#20ffffff</color>
+ 	<color name="blue_overlay">#660D92DD</color>
+    <color name="share_text">#FF4081</color>
+    <color name="clip_black">#000000</color>
+    <color name="clip_text">#ffffff</color>
+
+    <color name="selected_blue">#025bac</color>
+</resources>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Action Bar -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/topbarlayout"
+    style="@style/topbar_style" >
+
+    <EditText
+        android:id="@+id/searchbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/margin20"
+        android:drawableLeft="@drawable/searchbox"
+        android:drawablePadding="5dp"
+        android:ems="10"
+        android:hint="@string/searchHint"
+        android:singleLine="true" >
+
+        <requestFocus />
+    </EditText>
+
+    <ToggleButton
+        android:id="@+id/layersbutton"
+        style="@style/transparent_button_style"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/layers_button_selector"
+        android:text=""
+        android:textOff=""
+        android:textOn=""
+        android:visibility="gone" >
+    </ToggleButton>
+
+    <ToggleButton
+        android:id="@+id/gpsbutton"
+        style="@style/transparent_button_style"
+        android:layout_toLeftOf="@id/layersbutton"
+        android:background="@drawable/gps_button_selector"
+        android:textOff=""
+        android:textOn=""
+        android:visibility="gone" >
+    </ToggleButton>
+
+    <ToggleButton
+        android:id="@+id/compassbutton"
+        style="@style/transparent_button_style"
+        android:layout_toLeftOf="@id/gpsbutton"
+        android:background="@drawable/compass_button_selector"
+        android:text=""
+        android:textOff=""
+        android:textOn=""
+        android:visibility="gone" >
+    </ToggleButton>
+    <TextView
+        android:id="@+id/gpsstatustext"
+        style="@style/spinner_text_style"
+        android:layout_toLeftOf="@id/compassbutton"
+        android:gravity="right|center_vertical"
+        android:paddingLeft="@dimen/padding5"
+        android:text="" >
+    </TextView>
+    <TextView
+        android:id="@+id/statustext"
+        style="@style/spinner_text_style"
+        android:layout_toLeftOf="@id/gpsstatustext"
+        android:gravity="right|center_vertical"
+        android:paddingLeft="@dimen/padding5"
+        android:text="" >
+    </TextView>
+
+</RelativeLayout>

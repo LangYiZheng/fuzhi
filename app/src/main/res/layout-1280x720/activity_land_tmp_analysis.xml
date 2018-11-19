@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bk_01"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@id/header2"    
+        layout="@layout/activity_header" />
+
+    <RelativeLayout
+        android:id="@id/vg_analysis"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/land_details_rg"
+        android:layout_below="@id/header2"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="4.0dip"
+        android:paddingLeft="4.0dip"
+        android:paddingTop="10.0dip" >
+
+        <LinearLayout
+            android:id="@id/vg_analysis_chart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8.0dip"
+            android:gravity="center"
+            android:orientation="horizontal" />
+
+        <LinearLayout
+            android:id="@id/vg_analysis_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/vg_analysis_chart"
+            android:layout_alignRight="@id/vg_analysis_chart"
+            android:layout_below="@id/vg_analysis_chart"
+            android:orientation="vertical" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@id/land_details_rg"
+        android:layout_width="match_parent"
+        android:layout_height="60.0dip"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/menu_bar"
+        android:orientation="horizontal"
+        android:paddingBottom="10.0dip"
+        android:paddingTop="10.0dip" >
+
+        <RadioButton
+            android:id="@id/land_details_rb_return"
+            style="@style/menu_rb"
+            android:layout_width="wrap_content"
+            android:background="@drawable/bg_rdo_menu"
+            android:drawableTop="@drawable/navigation_return"
+            android:onClick="backOnClick"
+            android:text="返回" />
+    </RadioGroup>
+
+</RelativeLayout>

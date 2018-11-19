@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bk_login"
+    android:orientation="vertical">
+
+    <include
+        android:id="@id/title"
+        layout="@layout/activity_header"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@id/vg_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="16.0dip"
+        android:paddingBottom="16.0dip">
+
+        <TextView
+            android:id="@id/tv_title"
+            style="@style/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="区域选择" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/vg_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="20.0dip"
+        android:gravity="right|center"
+        android:orientation="vertical"
+        android:paddingTop="16.0dip"
+        android:paddingBottom="16.0dip">
+
+        <Button
+            android:id="@id/select_peo_rb_return"
+            style="@style/bottom_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16.0dip"
+            android:drawableLeft="@drawable/icon_back"
+            android:onClick="onBackBtnClick"
+            android:text="返    回" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/vg_middle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/vg_bottom"
+        android:layout_below="@id/vg_top"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginRight="20.0dip"
+        android:background="@drawable/bk_login_content_bk_2"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16.0dip">
+
+        <LinearLayout
+            android:id="@id/ll_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="5.0">
+
+            <TextView
+                android:id="@id/txt_area_province"
+                style="@style/area_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@drawable/btn_tab_bk"
+                android:ellipsize="end"
+                android:paddingTop="8.0dip"
+                android:paddingBottom="8.0dip"
+                android:singleLine="true"
+                android:text="省级" />
+
+            <TextView
+                android:id="@id/txt_area_city"
+                style="@style/area_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@drawable/btn_tab_bk"
+                android:ellipsize="end"
+                android:paddingTop="8.0dip"
+                android:paddingBottom="8.0dip"
+                android:singleLine="true"
+                android:text="市级" />
+
+            <TextView
+                android:id="@id/txt_area_county"
+                style="@style/area_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@drawable/btn_tab_bk"
+                android:ellipsize="end"
+                android:paddingTop="8.0dip"
+                android:paddingBottom="8.0dip"
+                android:singleLine="true"
+                android:text="县级" />
+
+            <TextView
+                android:id="@id/txt_area_street"
+                style="@style/area_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@drawable/btn_tab_bk"
+                android:ellipsize="end"
+                android:maxEms="5"
+                android:paddingTop="8.0dip"
+                android:paddingBottom="8.0dip"
+                android:singleLine="true"
+                android:text="街道"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@id/txt_area_query"
+                style="@style/area_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@drawable/btn_tab_bk"
+                android:drawableLeft="@drawable/nav_search"
+                android:gravity="center"
+                android:paddingLeft="16.0dip"
+                android:paddingTop="8.0dip"
+                android:paddingRight="16.0dip"
+                android:paddingBottom="8.0dip"
+                android:singleLine="true"
+                android:text="查    询" />
+
+            <ImageButton
+                android:id="@id/btn_query"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@drawable/btn_tab_bk"
+                android:padding="4.0dip"
+                android:src="@drawable/nav_search"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@id/ll_area_query"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/item_area_query" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@id/ll_area_lst_select"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v4.view.ViewPager
+                android:id="@id/guidePages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,409 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.guyu.android">
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <!--网络权限-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <!--敏感权限，需动态授权-->
+    <!--定位权限-->
+    <!--<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />-->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!--电话权限-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--拍照权限-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--读写sd卡权限-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <!--录音录像像权限-->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!--蓝牙权限-->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <!--安装权限-->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+
+
+
+    <application
+        android:name="com.guyu.android.gis.app.GisQueryApplication"
+        android:allowBackup="true"
+        android:largeHeap="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme.NoTitleBar">
+        <provider
+            android:authorities="com.guyu.android.FileProvider"
+            android:name="android.support.v4.content.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path"/>
+        </provider>
+
+        <activity
+            android:name="com.guyu.android.gis.activity.SplashActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.guyu.android.gis.activity.UnauthorizedActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+
+        </activity>
+        <activity
+            android:name="com.guyu.android.gis.activity.ExpiredActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+
+        </activity>
+        <activity android:name="com.guyu.android.gis.activity.PermissionsActivity"
+
+            />
+        <activity
+            android:name="com.guyu.android.gis.activity.LoginActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="adjustPan">
+
+        </activity>
+        <activity
+            android:name="com.guyu.android.gis.activity.MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="adjustPan">
+
+        </activity>
+        <activity
+            android:name="com.guyu.android.gis.activity.CollectSettingActivity"
+            android:label="@string/title_activity_collect"
+            android:theme="@android:style/Theme.Dialog">
+
+        </activity>
+        <activity
+            android:name="com.guyu.android.gis.activity.TmpAnalysisActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+
+        </activity>
+        <activity
+            android:name="com.guyu.android.gis.activity.MyTaskActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+
+        </activity>
+
+        <activity
+            android:name="com.guyu.android.gis.activity.AnalysisSummaryActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+
+        </activity>
+        <activity
+            android:name="com.guyu.android.gis.activity.LandAnalysisRecordDetailsActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+
+        </activity>
+        <activity
+            android:name="com.guyu.android.gis.activity.LandAnalysisActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+
+        </activity>
+        <activity
+            android:name="com.guyu.android.gis.activity.ShowSignatureActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+
+        </activity>
+        <activity
+            android:name="com.guyu.android.gis.activity.ClipActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+
+        </activity>
+        <activity
+            android:name="com.guyu.android.gis.activity.SelectAreaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="adjustPan">
+
+        </activity>
+        <activity
+            android:name="com.guyu.android.gis.activity.SelectUnitActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="adjustPan">
+
+        </activity>
+        <activity
+            android:name="com.guyu.android.gis.activity.SelectPeoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="adjustPan">
+
+        </activity>
+
+        <activity
+            android:name="com.guyu.android.gis.activity.SignaturePadActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="adjustPan">
+
+        </activity>
+
+        <activity
+            android:name="com.guyu.android.gis.activity.PrjSelectedActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+
+        </activity>
+        <activity
+            android:name="com.guyu.android.gis.activity.PrjSettingActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+
+        </activity>
+        <activity
+            android:name="com.guyu.android.gis.activity.CaseManagerActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+
+        </activity>
+
+
+        <activity
+            android:name="com.guyu.android.gis.activity.CaseDetailsActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+
+        </activity>
+
+
+        <activity
+            android:name="com.guyu.android.gis.activity.TaskManagerActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+
+        </activity>
+        <activity
+            android:name="com.guyu.android.gis.activity.InitializeRecordActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+
+        </activity>
+
+
+        <activity
+            android:name="com.guyu.android.gis.activity.PhotoSelectActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Black">
+
+        </activity>
+        <activity
+            android:name="com.guyu.android.gis.activity.RecordSoundActivity"
+
+            android:theme="@android:style/Theme.Dialog">
+
+        </activity>
+        <activity
+            android:name="com.guyu.android.gis.activity.SoundSelectActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Black">
+
+        </activity>
+        <activity
+            android:name="com.guyu.android.gis.activity.VideoSelectActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Black">
+
+        </activity>
+        <activity
+            android:name="com.guyu.android.gis.activity.ImgViewActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+
+        </activity>
+        <activity
+            android:name="com.guyu.android.gis.activity.SoundViewActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+
+        </activity>
+        <activity
+            android:name="com.guyu.android.gis.activity.VideoViewActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+
+        </activity>
+        <activity
+            android:name="com.guyu.android.widget.selectimgs.ImgFileListActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+
+        </activity>
+        <activity
+            android:name="com.guyu.android.widget.selectimgs.ImgsActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+
+        </activity>
+        <activity
+            android:name="com.guyu.android.gis.activity.TrackSettingActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Dialog">
+
+        </activity>
+        <activity
+            android:name="com.guyu.android.gis.activity.TrackManagerActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+
+        </activity>
+        <activity
+            android:name="com.guyu.android.gis.activity.TrackDetailsActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+
+        </activity>
+        <activity
+            android:name="com.guyu.android.gis.activity.TaskUpdateSettingActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Dialog">
+
+        </activity>
+        <activity
+            android:name="com.guyu.android.gis.activity.TaskDetailsActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+
+        </activity>
+        <activity
+            android:name="com.guyu.android.gis.activity.SetLocationActivity"
+            android:theme="@style/Dialog">
+
+        </activity>
+        <activity
+            android:name="com.guyu.android.gis.activity.SubmitCaseActivity"
+            android:theme="@android:style/Theme.Dialog">
+
+        </activity>
+        <!-- <activity
+             android:name="com.bairuitech.callcenter.LoginActivity"
+             android:configChanges="orientation|keyboardHidden"
+             android:launchMode="singleTop" >
+
+         </activity>-->
+        <activity
+            android:name="com.bairuitech.callcenter.HallActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+
+        </activity>
+        <activity
+            android:name="com.bairuitech.meeting.MeetingActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden">
+
+        </activity>
+        <activity
+            android:name="com.bairuitech.callcenter.VideoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+
+        </activity>
+        <activity
+            android:name="com.bairuitech.meeting.VideoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+
+        </activity>
+        <activity
+            android:name="com.bairuitech.callcenter.VideoConfigActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+
+        </activity>
+        <activity
+            android:name="com.bairuitech.meeting.VideoConfig"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+
+        </activity>
+
+        <service android:name="com.bairuitech.bgservice.BackService">
+            <intent-filter>
+                <action android:name="com.bairuitech.callcenter.backservice" />
+            </intent-filter>
+        </service>
+        <service android:name="com.guyu.android.gis.localservice.TrackingShowService">
+            <intent-filter android:priority="2147483647">
+                <action android:name="com.guyu.android.gis.localservice.TrackingShowService" />
+            </intent-filter>
+        </service>
+        <service android:name="com.guyu.android.gis.localservice.TaskUpdateService">
+            <intent-filter>
+                <action android:name="com.guyu.android.gis.localservice.TaskUpdateService" />
+            </intent-filter>
+        </service>
+        <service android:name="com.guyu.android.gis.activity.SaveAreasIntentService" />
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <uses-library android:name="com.android.future.usb.accessory" />
+
+        <activity
+            android:name="com.guyu.android.gis.activity.MPAndroidChartActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+
+        </activity>
+
+    </application>
+
+</manifest>

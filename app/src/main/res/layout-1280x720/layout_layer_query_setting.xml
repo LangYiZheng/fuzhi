@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bk_gray_trans_blod"
+    android:orientation="vertical"
+    android:paddingBottom="2.0dip"
+    android:paddingLeft="11.0dip"
+    android:paddingRight="11.0dip"
+    android:paddingTop="2.0dip"
+    android:scrollbars="none"
+    android:weightSum="1.0" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0.0dip"
+        android:layout_marginBottom="3.0dip"
+        android:layout_weight="1.01"
+        android:orientation="vertical"
+        android:paddingLeft="2.0dip"
+        android:paddingRight="2.0dip"
+        android:weightSum="0.8" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/filter_blank"
+            android:gravity="center_vertical"
+            android:text="可查询图层设置"
+            android:textColor="@color/black"
+            android:textSize="20.0dip"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@id/lst_layers"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="#00000000"
+                android:divider="@color/black_trans"
+                android:dividerHeight="0.5dip"
+                android:visibility="gone" />
+
+            <com.mobeta.android.dslv.DragSortListView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:dslv="http://schemas.android.com/apk/res/com.guyu.android"
+                android:id="@id/drag_list_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3.0dip"
+                android:choiceMode="multipleChoice"
+                android:dividerHeight="1.0px"
+                android:padding="3.0dip"
+                dslv:click_remove_id="@id/click_remove"
+                dslv:collapsed_height="1.0px"
+                dslv:drag_enabled="true"
+                dslv:drag_handle_id="@id/drag_handle"
+                dslv:drag_scroll_start="0.33"
+                dslv:drag_start_mode="onDown"
+                dslv:float_alpha="0.6"
+                dslv:remove_enabled="true"
+                dslv:remove_mode="clickRemove"
+                dslv:slide_shuffle_speed="0.3" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@id/btn_back"
+            style="@style/ButtonOK"
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:text="@string/ctl_back"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@id/btn_select_all"
+            style="@style/ButtonOK"
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:text="全选"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@id/btn_select_changed"
+            style="@style/ButtonOK"
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:text="反选"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@id/btn_un_select_all"
+            style="@style/ButtonOK"
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:text="全不选"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@id/btn_ok"
+            style="@style/ButtonOK"
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:text="@string/ok"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bk_login"
+    android:orientation="vertical"
+    android:paddingBottom="2.0dip"
+    android:paddingLeft="11.0dip"
+    android:paddingRight="11.0dip"
+    android:paddingTop="2.0dip" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="0.91"
+        android:orientation="vertical"
+        android:paddingBottom="3.0dip"
+        android:paddingLeft="3.0dip"
+        android:paddingRight="3.0dip" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/filter_blank"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingRight="3.0dip"
+                android:text="类型:"
+                android:textColor="@color/black"
+                android:textSize="20.0sp" />
+
+            <RadioGroup
+                android:id="@id/rg_type_select"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@id/rb_myself"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="个        人"
+                    android:textColor="@color/black" />
+
+                <RadioButton
+                    android:id="@id/rb_all"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="全        部"
+                    android:textColor="@color/black" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/filter_blank"
+            android:orientation="horizontal" >
+
+            <ListView
+                android:id="@id/lst_self_datas"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="#00000000"
+                android:paddingBottom="3.0dip"
+                android:visibility="gone" />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="#00000000"
+                android:paddingBottom="3.0dip"
+                android:visibility="visible"  />
+            <ListView
+                android:id="@id/lst_all_datas"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="#00000000"
+                android:paddingBottom="3.0dip"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@id/cb_more_track"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="多选操作"
+            android:textColor="@color/black" />
+        <Button
+            android:id="@id/btn_delete"
+            style="@style/ButtonOK"
+            android:text="删除"
+            android:visibility="invisible"/>
+
+        <Button
+            android:id="@id/btn_select_opt"
+            style="@style/ButtonOK"
+            android:text="全不选"
+            android:visibility="invisible"/>
+        <TextView
+            android:id="@+id/btnUpdateData"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:background="@color/white"
+            android:layout_margin="3dp"
+            android:gravity="center"
+            android:text="        同步数据        "
+            android:textColor="@color/black"
+            android:visibility="visible"/>
+        <Button
+            android:id="@id/btn_mapview_opt"
+            style="@style/ButtonOK"
+            android:text="地图查看"
+            android:visibility="invisible"/>
+
+        <Button
+            android:id="@id/btn_cancel"
+            style="@style/ButtonCancel"
+            android:text="返回" />
+    </LinearLayout>
+
+</LinearLayout>

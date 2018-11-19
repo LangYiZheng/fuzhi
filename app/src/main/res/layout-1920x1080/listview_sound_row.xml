@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/listview_selected"
+    android:orientation="horizontal"
+    android:padding="12.0dip" >
+
+    <ImageView
+        android:id="@id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/sound_icon" />
+
+    <TextView
+        android:id="@id/fileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"       
+        android:layout_toRightOf="@id/icon"
+        android:paddingLeft="8.0dip"
+        android:textColor="@drawable/black" />
+ 	<TextView
+        android:id="@id/docDefName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"     
+        android:layout_toLeftOf="@id/btn_soundPlay"
+        android:layout_toRightOf="@id/fileName"
+        android:paddingLeft="8.0dip"      
+        android:textColor="@drawable/black" />
+    <ImageView
+        android:id="@+id/btn_soundPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dip"
+        android:layout_toLeftOf="@id/checkBox01"
+        android:background="@color/transparent"
+        android:src="@drawable/sound_play" />
+
+    <CheckBox
+        android:id="@id/checkBox01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:checked="false"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:visibility="visible" />
+
+</RelativeLayout>

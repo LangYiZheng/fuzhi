@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_80"
+    android:orientation="vertical"
+    android:paddingLeft="11.0dip"
+    android:paddingTop="5.0dip"
+    android:paddingRight="11.0dip"
+    android:paddingBottom="5.0dip">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/filter_blank"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingRight="2.0dip">
+
+                <TextView
+                    android:id="@id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2.0dip"
+                    android:text="巡查地点"
+                    android:textColor="@color/black"
+                    android:textSize="20.0dip" />
+
+                <TextView
+                    android:id="@id/et_add"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3.0dip"
+                    android:layout_weight="1.0"
+                    android:ems="10" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingRight="2.0dip">
+
+                <TextView
+                    android:id="@id/tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2.0dip"
+                    android:text="巡查路线"
+                    android:textColor="@color/black"
+                    android:textSize="20.0dip" />
+
+                <EditText
+                    android:id="@id/et_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3.0dip"
+                    android:layout_weight="1.0" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingRight="2.0dip">
+
+                <TextView
+                    android:id="@id/tv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2.0dip"
+                    android:text="巡查情况"
+                    android:textColor="@color/black"
+                    android:textSize="20.0dip" />
+
+                <EditText
+                    android:id="@id/et_case"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3.0dip"
+                    android:layout_weight="1.0"
+                    android:ems="10" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingRight="2.0dip">
+
+                <TextView
+                    android:id="@id/tv4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2.0dip"
+                    android:minLines="3"
+                    android:text="信息反馈\n及一级巡\n查区情况"
+                    android:textColor="@color/black"
+                    android:textSize="20.0dip" />
+
+                <EditText
+                    android:id="@id/et_more_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3.0dip"
+                    android:layout_weight="1.0"
+                    android:ems="10" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingRight="2.0dip">
+
+                <TextView
+                    android:id="@id/tv5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2.0dip"
+                    android:text="   部  门  \n负  责  人"
+                    android:textColor="@color/black"
+                    android:textSize="20.0dip" />
+
+                <EditText
+                    android:id="@id/et_men"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3.0dip"
+                    android:layout_weight="1.0" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingRight="2.0dip">
+
+                <TextView
+                    android:id="@id/tv5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2.0dip"
+                    android:text="   业  务  \n类  型"
+                    android:textColor="@color/black"
+                    android:textSize="20.0dip" />
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/business_type" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <Button
+                android:id="@id/seven_cancle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:text="@string/cancel" />
+
+            <Button
+                android:id="@id/seven_OK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:text="@string/ok" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

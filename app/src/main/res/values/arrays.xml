@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="actions">
+        <item>点</item>
+        <item>线</item>
+        <item>面</item>
+        <item>其他</item>
+        <item>Resources</item>
+        <item>Videos</item>
+        <item>Blog</item>
+    </string-array>
+    <string-array name="dataset_pic">
+        <item>btn_other_normal</item>
+        <item>btn_point_normal</item>
+        <item>btn_other_normal</item>
+        <item>btn_line_normal</item>
+        <item>btn_other_normal</item>
+        <item>btn_area_normal</item>
+    </string-array>
+    <string-array name="dataset_name">
+        <item>City</item>
+        <item>Province</item>
+        <item>Land</item>
+        <item>Water</item>
+        <item>other</item>
+        <item>other</item>
+        <item>other</item>
+        <item>other</item>
+        <item>other</item>
+        <item>other</item>
+        <item>other</item>
+    </string-array>
+    <string-array name="string_function">
+        <item>字符串函数</item>
+        <item>Ascii</item>
+        <item>Char</item>
+        <item>Charindex</item>
+        <item>Difference</item>
+        <item>Left</item>
+        <item>Len</item>
+        <item>Lower</item>
+        <item>Ltrim</item>
+        <item>Nchar</item>
+        <item>Patindex</item>
+        <item>Replicate</item>
+        <item>Quotename</item>
+        <item>Reverse</item>
+        <item>Right</item>
+        <item>Rtrim</item>
+        <item>Soundex</item>
+        <item>Space</item>
+        <item>Str</item>
+        <item>Stuff</item>
+        <item>Substring</item>
+        <item>Unicode</item>
+        <item>Upper</item>
+    </string-array>
+    <string-array name="mathematical_function">
+        <item>数学函数</item>
+        <item>Abs</item>
+        <item>Acos</item>
+        <item>Asin</item>
+        <item>Atan</item>
+        <item>Atn2</item>
+        <item>Ceiling</item>
+        <item>Cos</item>
+        <item>Cot</item>
+        <item>CBool</item>
+        <item>CByte</item>
+        <item>CCur</item>
+        <item>CDate</item>
+        <item>CDbl</item>
+        <item>CInt</item>
+        <item>CLng</item>
+        <item>CSng</item>
+        <item>CStr</item>
+        <item>Int</item>
+        <item>Fix</item>
+        <item>Degrees</item>
+        <item>Exp</item>
+        <item>Floor</item>
+        <item>Log</item>
+        <item>Log10</item>
+        <item>PI</item>
+        <item>Power</item>
+        <item>Radians</item>
+        <item>Rand</item>
+        <item>Round</item>
+    </string-array>
+    <string-array name="TimeAndData_function">
+        <item>时间日期函数</item>
+        <item>DateAdd</item>
+        <item>Datediff</item>
+        <item>Datename</item>
+        <item>Datepart</item>
+        <item>Day</item>
+        <item>Getdate</item>
+        <item>Getutcdate</item>
+        <item>Month</item>
+        <item>Year</item>
+    </string-array>
+    <string-array name="field_type">
+        <item>布尔类型</item>
+        <item>32位长整型</item>
+        <item>双精度浮点型</item>
+        <item>Date类型</item>
+        <item>字符串类型</item>
+    </string-array>
+    <string-array name="field_type_name">
+        <item>文本</item>
+        <item>浮点数</item>
+        <item>整数</item>
+        <item>日期</item>
+        <item>时间</item>
+        <item>照片</item>
+    </string-array>
+    <integer-array name="field_type_value">
+        <item>10</item>
+        <item>7</item>
+        <item>4</item>
+        <item>8</item>
+        <item>22</item>
+        <item>129</item>
+    </integer-array>
+    <string-array name="dataset_type">
+        <item>点类型</item>
+        <item>线类型</item>
+        <item>面类型</item>
+    </string-array>
+    <string-array name="dataset_type_value">
+        <item>1</item>
+        <item>3</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="config_items">
+        <item>经纬度格式</item>
+        <item>七参设置</item>
+        <item>工程属性</item>
+        <item>卫星视图</item>
+        <item>密码修改</item>
+    </string-array>
+    <string-array name="config_items_2">
+        <item>经纬度格式</item>
+        <item>七参设置</item>
+        <item>工程属性</item>
+        <item>卫星视图</item>
+        <item>密码修改</item>
+        <item>网络设置</item>
+    </string-array>
+    <string-array name="coord_format">
+        <item>度度.度度度度度°</item>
+        <item>度度°分分.分分分′</item>
+        <item>度度°分分′秒秒.秒秒秒″</item>
+    </string-array>
+    <string-array name="collect_time_set">
+        <item>1秒</item>
+        <item>5秒</item>
+        <item>10秒</item>
+        <item>20秒</item>
+        <item>30秒</item>
+        <item>1分钟</item>
+        <item>5分钟</item>
+        <item>30分钟</item>
+    </string-array>
+    <string-array name="collect_distance_set">
+        <item>1米</item>
+        <item>5米</item>
+        <item>10米</item>
+        <item>20米</item>
+        <item>50米</item>
+        <item>100米</item>
+        <item>500米</item>
+        <item>1千米</item>
+    </string-array>
+
+    <string-array name="business_type">
+        <item>违法用地巡查</item>
+        <item>矿山巡查</item>
+        <item>地质灾害点巡查</item>
+    </string-array>
+    <string-array name="taskupdate_time_set">
+        <item>5秒更新一次</item>
+        <item>10秒更新一次</item>
+        <item>20秒更新一次</item>
+        <item>30秒更新一次</item>
+        <item>1分钟更新一次</item>
+        <item>5分钟更新一次</item>
+        <item>30分钟更新一次</item>
+    </string-array>
+    <string-array name="prj_coord_sys">
+        <item>无投影</item>
+        <item>Plate Carree</item>
+        <item>Equidistant Cylindrical</item>
+        <item>Miller Cylindrical</item>
+        <item>Mercator</item>
+        <item>Gauss-Kruger</item>
+        <item>UTM</item>
+        <item>Albers</item>
+        <item>Sinusoidal</item>
+        <item>Mollweide</item>
+    </string-array>
+</resources>

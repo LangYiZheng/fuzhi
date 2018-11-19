@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bk_login"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@id/title"
+        layout="@layout/activity_header"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@id/vg_middle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/vg_bottom"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5.0dip"
+        android:layout_marginRight="5.0dip"
+        android:background="@drawable/bk_login_content_bk_2"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="15.0dip"
+        android:paddingLeft="3.0dip"
+        android:paddingRight="3.0dip"
+        android:paddingTop="3.0dip" >
+
+        <LinearLayout
+            android:id="@id/ll_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="8.0dip"
+            android:paddingRight="8.0dip"
+            android:paddingTop="8.0dip"
+            android:weightSum="5.0" >
+
+            <TextView
+                android:id="@id/tv_wfxs"
+                style="@style/area_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@drawable/btn_tab_bk"
+                android:ellipsize="end"
+                android:paddingBottom="8.0dip"
+                android:paddingTop="8.0dip"
+                android:singleLine="true"
+                android:text="违法线索" />
+
+            <TextView
+                android:id="@id/tv_wphc"
+                style="@style/area_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@drawable/btn_tab_bk"
+                android:ellipsize="end"
+                android:paddingBottom="8.0dip"
+                android:paddingTop="8.0dip"
+                android:singleLine="true"
+                android:text="卫片核查" />
+
+            <TextView
+                android:id="@id/tv_ajcc"
+                style="@style/area_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@drawable/btn_tab_bk"
+                android:ellipsize="end"
+                android:paddingBottom="8.0dip"
+                android:paddingTop="8.0dip"
+                android:singleLine="true"
+                android:text="案件查处" />
+
+            <TextView
+                android:id="@id/tv_ndbgdc"
+                style="@style/area_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@drawable/btn_tab_bk"
+                android:ellipsize="end"
+                android:paddingBottom="8.0dip"
+                android:paddingTop="8.0dip"
+                android:singleLine="true"
+                android:text="年度变更调查" />
+
+            <TextView
+                android:id="@id/tv_tdlydtxc"
+                style="@style/area_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@drawable/btn_tab_bk"
+                android:ellipsize="end"
+                android:paddingBottom="8.0dip"
+                android:paddingTop="8.0dip"
+                android:singleLine="true"
+                android:text="土地利用动态巡查" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp" >
+
+                <EditText
+                    android:id="@+id/etSearch"
+                    android:layout_width="550dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:hint=""
+                    android:singleLine="true"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btnSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:onClick="onClickSearch"
+                    android:text="   搜       索   "
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@id/ll_task_lst_select"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <android.support.v4.view.ViewPager
+                android:id="@id/taskPage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/vg_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="5.0dip"
+        android:gravity="right|center"
+        android:orientation="horizontal"
+        android:paddingBottom="2.0dip"
+        android:paddingTop="2.0dip" >
+
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="3.0dip"
+            android:layout_weight="1.0" />
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="4.0"
+            android:gravity="right|center" >
+
+            <RelativeLayout
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="4.0"
+                android:gravity="center_vertical" >
+
+                <CheckBox
+                    android:id="@id/cb_more_opt_task"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="多选操作"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@id/btn_task_delete"
+                    style="@style/bottom_btn"
+                    android:layout_toLeftOf="@id/updateBtn"
+                    android:onClick="onDeleteTaskClick"
+                    android:text="删    除"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@id/updateBtn"
+                    style="@style/bottom_btn"
+                    android:layout_toLeftOf="@id/updateRightNowBtn"
+                    android:drawableLeft="@drawable/icon_order"
+                    android:onClick="updateSettingOnClick"
+                    android:text="  更新设置" />
+
+                <Button
+                    android:id="@id/updateRightNowBtn"
+                    style="@style/bottom_btn"
+                    android:layout_toLeftOf="@id/bottom_btn_back"
+                    android:drawableLeft="@drawable/icon_order"
+                    android:onClick="updateOnClick"
+                    android:text="  马上更新" />
+
+                <Button
+                    android:id="@id/bottom_btn_back"
+                    style="@style/bottom_btn"
+                    android:layout_alignParentRight="true"
+                    android:drawableLeft="@drawable/icon_back"
+                    android:onClick="onBackOnClick"
+                    android:text="  返    回" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

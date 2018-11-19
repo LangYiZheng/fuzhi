@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bk_login"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@id/title"
+        layout="@layout/activity_header"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@id/vg_top"
+        style="@style/page_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@id/tv_title"
+            style="@style/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:text="任务详情" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/vg_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="20.0dip"
+        android:gravity="right|center"
+        android:orientation="horizontal"
+        android:paddingTop="4.0dip" >
+
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="16.0dip"
+            android:layout_weight="1.0" />
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="6.0"
+            android:gravity="right|center" >
+
+            <Button
+                android:id="@id/task_details_rg_location"
+                style="@style/bottom_btn"
+                android:onClick="taskLocationOnClick"
+                android:text="地图定位" />
+
+            <Button
+                android:id="@id/task_details_rb_analysis"
+                style="@style/bottom_btn"
+                android:onClick="taskAnalysisOnClick"
+                android:text="占地分析" />
+
+            <Button
+                android:id="@id/wphc_details_rb_jzd"
+                style="@style/bottom_btn"
+                android:onClick="landDetailsOnClick"
+                android:text="界址信息"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@id/btn_case_imgs"
+                style="@style/bottom_btn"
+                android:text="图片信息" />
+
+            <Button
+                android:id="@id/btn_case_sounds"
+                style="@style/bottom_btn"
+                android:text="音频信息" />
+
+            <Button
+                android:id="@id/btn_case_videos"
+                style="@style/bottom_btn"
+                android:text="视频信息" />
+
+            <Button
+                android:id="@id/task_details_save_data"
+                style="@style/bottom_btn"
+                android:onClick="saveTaskResult"
+                android:text="保   存 " />
+
+            <Button
+                android:id="@id/task_details_rb_up_data"
+                style="@style/bottom_btn"
+                android:drawableLeft="@drawable/icon_order"
+                android:text="  上    报" />
+
+            <Button
+                android:id="@id/select_peo_rb_return"
+                style="@style/bottom_btn"
+                android:drawableLeft="@drawable/icon_back"
+                android:onClick="backOnClick"
+                android:text="  返    回" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/vg_middle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/vg_bottom"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/vg_top"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginRight="20.0dip"
+        android:background="@drawable/bk_login_content_bk_2"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="4.0dip" >
+
+        <ScrollView
+            android:id="@id/vg_normal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="40.0dip"
+            android:paddingTop="25.0dip" >
+
+            <LinearLayout
+                android:id="@id/LinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible" >
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

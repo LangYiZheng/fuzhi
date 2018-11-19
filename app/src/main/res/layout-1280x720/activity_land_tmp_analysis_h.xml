@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bk_login"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@id/title"
+        layout="@layout/activity_header"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@id/vg_top"
+        style="@style/page_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@id/tv_title"
+            style="@style/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="叠加分析" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/vg_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="20.0dip"
+        android:gravity="right|center"
+        android:orientation="horizontal"
+        android:paddingBottom="8.0dip"
+        android:paddingTop="8.0dip" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:layout_marginLeft="20dip"
+            android:gravity="left|center"
+            android:orientation="horizontal">
+            <Button
+                style="@style/bottom_btn"
+                android:id="@+id/btn_pieChart"
+                android:text="饼状图" />
+
+            <Button
+                style="@style/bottom_btn"
+                android:id="@+id/btn_barChart"
+                android:paddingLeft="20dip"
+                android:text="柱状图" />
+        </LinearLayout>
+        <View
+            android:visibility="gone"
+            android:layout_width="0.0dip"
+            android:layout_height="16.0dip"
+            android:layout_weight="1.0" />
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.0"
+            android:gravity="right|center" >
+
+            <Button
+                style="@style/bottom_btn"
+                android:drawableLeft="@drawable/icon_order"
+                android:onClick="onSetBufferNumberClick"
+                android:text="  缓冲值设置"
+                android:visibility="gone" />
+
+            <Button
+                style="@style/bottom_btn"
+                android:drawableLeft="@drawable/icon_back"
+                android:onClick="backOnClick"
+                android:text="  返    回" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/vg_middle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/vg_bottom"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/vg_top"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginRight="20.0dip"
+        android:background="@drawable/bk_login_content_bk_2"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="32.0dip"
+        android:paddingLeft="8.0dip"
+        android:paddingRight="8.0dip"
+        android:paddingTop="8.0dip" >
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/layout_analysis_result" />
+    </LinearLayout>
+
+</RelativeLayout>

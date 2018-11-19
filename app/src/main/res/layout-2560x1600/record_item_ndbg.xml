@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center" android:id="@id/textView01" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/txt_content" />
+    <TextView android:gravity="center" android:id="@id/textView02" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="2.0" style="@style/txt_content" />
+    <TextView android:gravity="center" android:id="@id/textView03" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/txt_content" />
+    <TextView android:gravity="center" android:id="@id/textView04" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/txt_content" />
+    <CheckBox
+        android:id="@id/cb_check_ndbg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+</LinearLayout>

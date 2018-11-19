@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/record_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/grey_80"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <LinearLayout
+        android:id="@id/record"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="2.0dip"
+        android:weightSum="3.0"
+        android:gravity="center">
+
+        <TextView
+            android:id="@id/attribute_name"
+            style="@style/view_title_text"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8.0dip"
+            android:layout_weight="1.0"
+            android:gravity="left|center" />
+
+        <LinearLayout
+            android:id="@id/vg_record_style_01"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.0"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <EditText
+                android:id="@id/attribute_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@id/vg_record_style_02"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.0"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <ImageButton
+                android:id="@id/btn_value_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="4.0dip"
+                android:layout_marginRight="4.0dip" />
+
+            <TextView
+                android:id="@id/field_value"
+                style="@style/view_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12.0dip"
+                android:layout_toLeftOf="@id/btn_value_setting"
+                android:gravity="left|center"
+                android:paddingBottom="3.0dip"
+                android:paddingTop="3.0dip"
+                android:textColor="#ff101010"
+                android:textSize="16.0sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@id/vg_record_style_03"
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="2.0"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@id/field_sp_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="middle"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+
+            <Spinner
+                android:id="@id/sp_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Spinner
+                android:id="@+id/city"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@id/vg_record_style_04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.0"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <Switch
+                android:id="@id/btn_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@id/vg_record_style_05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.0"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+            <CheckBox
+                android:id="@id/checkbox_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rlBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.0"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            >
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="0.0dip"
+                android:layout_height="match_parent"
+                android:layout_marginRight="2.0dip"
+                android:layout_weight="1.0"
+                android:text="业务数据清空"
+                android:textSize="11sp"/>
+            <Button
+                android:id="@+id/btnBackup"
+                android:layout_width="0.0dip"
+                android:layout_height="match_parent"
+                android:layout_marginRight="2.0dip"
+                android:layout_weight="1.0"
+                android:text="业务数据备份"
+                android:textSize="11sp"/>
+            <Button
+                android:id="@+id/btnRestoreData"
+                android:layout_width="0.0dip"
+                android:layout_height="match_parent"
+                android:layout_marginRight="2.0dip"
+                android:layout_weight="1.0"
+                android:text="业务数据还原"
+                android:textSize="11sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View android:id="@+id/line" style="@style/view_boder_h" />
+
+</LinearLayout>

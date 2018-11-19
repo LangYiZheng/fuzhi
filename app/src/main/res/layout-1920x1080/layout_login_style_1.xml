@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/bk_login_content_bk" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="2.0dip" android:paddingRight="2.0dip" android:layout_width="match_parent" android:layout_height="0.0dip" android:layout_weight="2.0">
+        <TextView android:gravity="center" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="  行政区:" android:drawableLeft="@drawable/icon_area" style="@style/txt_login_menu" />
+         <TextView android:gravity="center" android:id="@id/cantonID" android:layout_width="wrap_content" android:layout_height="match_parent" android:visibility="gone"/>
+        <TextView android:gravity="center" android:id="@id/tv_select_area" android:background="@drawable/bk_vg" android:layout_width="0.0dip" android:layout_height="match_parent" android:text="" android:drawableRight="@drawable/icon_expand_normal" android:layout_weight="1.0" style="@style/txt_login_content" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="2.0dip" android:paddingRight="2.0dip" android:layout_width="match_parent" android:layout_height="0.0dip" android:layout_weight="2.0">
+        <TextView android:gravity="center" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="  单    位:" android:drawableLeft="@drawable/icon_office" style="@style/txt_login_menu" />
+        <TextView android:gravity="center" android:id="@id/unitID" android:layout_width="wrap_content" android:layout_height="match_parent" android:visibility="gone"/>
+        <TextView android:gravity="center" android:id="@id/tv_select_office" android:background="@drawable/bk_vg" android:layout_width="match_parent" android:layout_height="match_parent" android:text="" android:drawableRight="@drawable/icon_expand_normal" style="@style/txt_login_content" />
+    </LinearLayout> 
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="2.0dip" android:paddingRight="2.0dip" android:layout_width="match_parent" android:layout_height="0.0dip" android:layout_weight="2.0">
+        <TextView android:gravity="center" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="  人    员:" android:drawableLeft="@drawable/icon_peo" style="@style/txt_login_menu" />
+        <TextView android:gravity="center" android:id="@id/pwd" android:layout_width="wrap_content" android:layout_height="match_parent" android:visibility="gone"/>
+        <TextView android:gravity="center" android:id="@id/tv_select_peo" android:background="@drawable/bk_vg" android:layout_width="match_parent" android:layout_height="match_parent" android:text="" android:drawableRight="@drawable/icon_expand_normal" style="@style/txt_login_content" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/vg_password" android:paddingLeft="2.0dip" android:paddingRight="2.0dip" android:paddingBottom="22.0dip" android:layout_width="match_parent" android:layout_height="0.0dip" android:layout_weight="2.8">
+        <TextView android:gravity="center" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="  密    码:" android:drawableLeft="@drawable/icon_pwd" style="@style/txt_login_menu" />
+        <EditText android:gravity="center" android:id="@id/et_pwd" android:layout_width="0.0dip" android:layout_height="match_parent" android:layout_marginTop="2.0dip" android:text="" android:hint="请输入密码" android:layout_weight="6.0" android:inputType="textPassword" android:imeOptions="actionGo" style="@style/txt_login_content" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:paddingLeft="2.0dip" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1.0">
+            <CheckBox android:textColor="@android:color/black" android:gravity="center" android:id="@id/cb_01" android:paddingLeft="2.0dip" android:layout_width="match_parent" android:layout_height="match_parent" android:text="记住密码" style="@style/txt_login_content" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

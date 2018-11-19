@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bk_login"
+    android:orientation="vertical">
+
+    <!--   <include
+          android:id="@id/title"
+          layout="@layout/activity_header"
+          android:visibility="gone" />
+   -->
+    <LinearLayout
+        android:id="@id/vg_top"
+        style="@style/page_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@id/tv_title_track"
+            style="@style/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:text="巡查轨迹详情" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/vg_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="20.0dip"
+        android:gravity="right|center"
+        android:orientation="horizontal"
+        android:paddingTop="4.0dip">
+
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="16.0dip"
+            android:layout_weight="1.0" />
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="6.0"
+            android:gravity="right|center">
+
+            <Button
+                android:id="@id/btn_case_imgs"
+                style="@style/bottom_btn"
+                android:text="图片信息" />
+
+            <Button
+                android:id="@id/btn_case_sounds"
+                style="@style/bottom_btn"
+                android:text="音频信息" />
+
+            <Button
+                android:id="@id/btn_case_videos"
+                style="@style/bottom_btn"
+                android:text="视频信息" />
+
+            <Button
+                android:id="@id/btn_mapview_track"
+                style="@style/bottom_btn"
+                android:onClick="trackLocationOnClick"
+                android:text="地图查看" />
+
+
+            <Button
+                android:id="@id/btn_uploadOffline_track"
+                style="@style/bottom_btn"
+                android:drawableLeft="@drawable/icon_order"
+                android:onClick="trackUpdDataOnClick"
+                android:text="离线上传" />
+
+
+            <Button
+                android:id="@id/btn_back_track"
+                style="@style/bottom_btn"
+                android:drawableLeft="@drawable/icon_back"
+                android:onClick="backOnClickTrack"
+                android:text="  返    回" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/vg_middle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/vg_bottom"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/vg_top"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginRight="20.0dip"
+        android:background="@drawable/bk_login_content_bk_2"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="4.0dip">
+
+        <ScrollView
+            android:id="@id/vg_normal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="4.0dip"
+                android:paddingLeft="4.0dip"
+                android:paddingTop="10.0dip"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <TextView
+                        style="@style/txt_content"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:text="巡查地点" />
+
+                    <LinearLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3.0"
+                        android:orientation="vertical"
+                        android:padding="8.0dip">
+
+                        <EditText
+                            android:id="@id/et_xcdd_track_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent"
+                            android:inputType="textUri" />
+
+                        <View style="@style/view_base_line" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <TextView
+                        style="@style/txt_content"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:text="巡查路线" />
+
+                    <LinearLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3.0"
+                        android:orientation="vertical"
+                        android:padding="8.0dip">
+
+                        <EditText
+                            android:id="@id/et_xclx_track_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent" />
+
+                        <View style="@style/view_base_line" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <TextView
+                        style="@style/txt_content"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:text="巡查情况" />
+
+                    <LinearLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3.0"
+                        android:orientation="vertical"
+                        android:padding="8.0dip">
+
+                        <EditText
+                            android:id="@id/et_xcqk_track_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent" />
+
+                        <View style="@style/view_base_line" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <TextView
+                        style="@style/txt_content"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:text="信息反馈" />
+
+                    <LinearLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3.0"
+                        android:orientation="vertical"
+                        android:padding="8.0dip">
+
+                        <EditText
+                            android:id="@id/et_xxfk_track_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent" />
+
+                        <View style="@style/view_base_line" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <TextView
+                        style="@style/txt_content"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:text="部门负责人" />
+
+                    <LinearLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3.0"
+                        android:orientation="vertical"
+                        android:padding="8.0dip">
+
+                        <EditText
+                            android:id="@id/et_bmfzr_track_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent" />
+
+                        <View style="@style/view_base_line" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <TextView
+                        style="@style/txt_content"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:text="业务类型" />
+
+                    <LinearLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3.0"
+                        android:orientation="vertical"
+                        android:padding="8.0dip">
+
+                        <TextView
+                            android:id="@+id/spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent"
+
+                            />
+
+                        <View style="@style/view_base_line" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="@dimen/dp_72"
+                        android:gravity="center_vertical|left"
+                        android:text="图片" />
+
+                    <TextView
+                        android:id="@+id/mPhotoTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:hint="已选择0张图片" />
+
+                    <ImageButton
+                        android:id="@+id/photoButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:src="@drawable/camera_icon" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="@dimen/dp_72"
+                        android:gravity="center_vertical|left"
+                        android:text="音频" />
+
+                    <TextView
+                        android:id="@+id/mSoundTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:hint="已选择0张录音" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:src="@drawable/sound_icon" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="@dimen/dp_72"
+                        android:gravity="center_vertical|left"
+                        android:text="视频" />
+
+                    <TextView
+                        android:id="@+id/mVideoTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:hint="已选择0张录像" />
+
+                    <ImageButton
+                        android:id="@+id/videoButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:src="@drawable/video_icon" />
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <TextView
+                        style="@style/txt_content"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:text="X" />
+
+                    <TextView
+                        style="@style/txt_content"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:text="Y" />
+                    <!--<TextView-->
+                    <!--style="@style/txt_content"-->
+                    <!--android:layout_width="0.0dip"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1.0"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="时间" />-->
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"></android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

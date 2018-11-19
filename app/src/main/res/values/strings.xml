@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--<string name="app_name">英德市林业外业系统</string>-->
+    <!--<string name="app_name">林业移动测绘管理系统</string>-->
+    <string name="app_name">移动执法管理系统</string>
+    <!-- <string name="app_name">淄博市文昌湖一张图查询系统</string> -->
+    <!-- <string name="app_name">北京一张图查询系统</string> -->
+    <!-- <string name="app_name">淄博市国土资源局临淄分局一张图查询系统</string> -->
+    <!-- <string name="app_name">淄博市国土资源局临淄分局科技执法系统</string> -->
+    <!--<string name="app_version_num">IGISQUERY-LYZF-1-2015-12-09-1</string>-->
+    <string name="cancel">取消</string>
+    <string name="ok">确定</string>
+    <string name="maplayers">图层控制</string>
+    <string name="searchLabel">查询</string>
+    <string name="searchHint">请输入查询内容</string>
+    <string name="title_activity_collect">采集设置</string>
+    <string name="unin_second">单位秒</string>
+    <string name="auto_tip_time">自动采集时间间隔</string>
+    <string name="ctl_back">返回</string>
+    <string name="ctl_import">导入新工程</string>
+    <string name="ctl_open">打开</string>
+    <string name="ctl_reboot">重启系统</string>
+    <string name="ctl_close">关闭</string>
+    <string name="title_activity_prj_manager">工程管理</string>
+    <string name="title_activity_layer_manager">图层管理</string>
+    <string name="is_open_gps">是否开启GPS?</string>
+    <string name="setting">设置</string>
+    <string name="gps_closed">Gps未开启</string>
+    <string name="maplayer">地图图层</string>
+    <string name="results">结果集</string>
+    <string name="result">结果</string>
+    <string name="zonenavi">区划导航</string>
+    <string name="fulltextquery">查询</string>
+    <!-- Bluetooth -->
+    <string name="bluetooth_devices">蓝牙设备</string>
+    <string name="alert_dialog_no_bt">对不起，没有蓝牙这个功能不能用！</string>
+    <string name="alert_dialog_turn_on_bt">这个功能需要蓝牙，你要打开吗？</string>
+    <string name="connecting_to_device">正在连接到设备</string>
+    <string name="connection_started">蓝牙服务已启动</string>
+    <!-- DeviceListActivity -->
+    <string name="none_paired">没有已配对的设备</string>
+    <string name="none_found">没有发现可配对设备</string>
+    <string name="paired_devices">已配对设备</string>
+    <string name="other_devices">其它可用的设备</string>
+    <string name="button_scan">扫描设备</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_video">VideoActivity</string>
+    <string name="str_account">账          号:</string>
+    <string name="str_account_input_hint">请输入账号！</string>
+    <string name="str_login">登录</string>
+    <string name="str_isSavepass">记住用户名密码</string>
+    <string name="login_progress">正在登陆，请稍后!</string>
+    <string name="server_connect_error">服务器连接失败!</string>
+    <string name="str_serverip">服务器地址: </string>
+    <string name="str_serverport">服务器端口号: </string>
+    <string name="str_serveripinput">请输入服务器地址! </string>
+    <string name="str_serverportinput">请输入服务器端口号!</string>
+    <string name="str_againlogin">账号在异处登陆，请重新登录</string>
+    <string name="str_login_failed">登录系统失败</string>
+    <string name="str_enterroom_failed">进入房间失败</string>
+    <string name="str_lggin_failed">登录失败</string>
+    <string name="str_exit">退出</string>
+    <string name="str_accept">接受</string>
+    <string name="str_refuse">拒绝</string>
+    <string name="str_resume">确认</string>
+    <string name="str_cancel">取消</string>
+    <string name="str_pause">挂断</string>
+    <string name="str_send">发送</string>
+    <string name="str_call">呼叫</string>
+    <string name="str_back">返回</string>
+    <string name="str_menu">菜单</string>
+    <string name="str_switchcamera">切换摄像头</string>
+    <string name="str_setting">设置</string>
+    <string name="str_save">保存修改</string>
+    <string name="no_onlines">当前没有在线用户</string>
+    <string name="str_returncode_bussiness">呼叫对象正忙，请稍后再试</string>
+    <string name="str_returncode_offline">呼叫用户不在线</string>
+    <string name="str_user_offline">目标用户离线</string>
+    <string name="str_returncode_requestcancel">用户取消呼叫</string>
+    <string name="str_returncode_requestrefuse">用户拒绝被呼叫</string>
+    <string name="str_returncode_disconnect">对方网络异常</string>
+    <string name="str_returncode_timeout">呼叫超时</string>
+    <string name="sessioning_reqite">请求与您通话！</string>
+    <string name="str_calling">呼叫成功，正在等待用户响应</string>
+    <string name="session_end">会话已经挂断</string>
+    <string name="str_targetwrong">不能呼叫自己！</string>
+    <string name="str_endsession">是否想要结束当前通话</string>
+    <string name="end_session">结束通话</string>
+    <string name="str_networkcheck">当前网络连接有异常，请检查网络</string>
+    <string name="str_serverlink_close">与服务器断开连接，错误代码是</string>
+    <string name="str_exitresume">是否想要退出房间</string>
+    <string name="str_msgchatlist">文字聊天消息列表</string>
+    <string name="str_notifitcation">iCloudSoft正在运行中</string>
+    <string name="str_dialog_title_protip">呼叫中心提示</string>
+    <string name="BACKING_RUNING">呼叫中心正在后台运行</string>
+    <string name="company_msg"> </string>
+    <!-- <string name="company_msg">北京中数集思软件技术有限公司 </string>
+     -->
+    <string name="endCall1">结束对话</string>
+    <string name="HelloTitle">"会议中心"</string>
+    <string name="str_noconnect2server">没有连接到服务器</string>
+    <string name="str_connect2serversuccess">成功连接到服务器</string>
+
+    <string name="clear_pad">清除签名</string>
+    <string name="save_signature">保存签名</string>
+
+
+    <string name="help">帮助</string>
+    <string name="string_help_text">当前应用缺少必要权限。\n请点击"设置"-"权限"-打开所需的权限。</string>
+    <string name="quit">退出</string>
+    <string name="settings">设置</string>
+</resources>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bk_login"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@id/ll_01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8.0dip"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="2.0dip"
+        android:paddingRight="2.0dip" >
+
+        <Button
+            android:id="@id/buttonConfirm"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="确定"
+            android:textSize="18.0sp" />
+
+        <Button
+            android:id="@id/toCamera"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8.0dip"
+            android:layout_weight="1.0"
+            android:text="拍照"
+            android:textSize="18.0sp" />
+ 		<Button
+            android:id="@id/toSelectPhoto"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8.0dip"
+            android:layout_weight="1.0"
+            android:text="选择..."
+            android:textSize="18.0sp" />
+        <Button
+            android:id="@id/buttonCancle"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8.0dip"
+            android:layout_weight="1.0"
+            android:text="取消"
+            android:textSize="18.0sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/ll_docdef"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ll_01"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@id/field_sp_value"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:padding="8.0dip"
+            android:singleLine="true"
+            android:text="请选择要件类别"
+            android:textColor="@color/red"
+            android:textSize="18.0sp" />
+
+        <Spinner
+            android:id="@id/sp_value"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="6.0" />
+
+        <Button
+            android:id="@id/buttonUpdate"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8.0dip"
+            android:layout_weight="1.0"
+            android:text="更新类别"
+            android:textSize="18.0sp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll_docdef"
+        android:cacheColorHint="#00000000"
+        android:scrollbars="vertical" />
+
+</RelativeLayout>

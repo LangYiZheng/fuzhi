@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bk_login"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@id/title"
+        layout="@layout/activity_header"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@id/vg_top"
+        style="@style/page_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@id/tv_title"
+            style="@style/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/vg_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="20.0dip"
+        android:gravity="right|center"
+        android:orientation="horizontal"
+        android:paddingBottom="8.0dip"
+        android:paddingTop="8.0dip" >
+
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="16.0dip"
+            android:layout_weight="1.0" />
+
+        <RelativeLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="4.0"
+            android:gravity="center_vertical" >
+
+            <CheckBox
+                android:id="@id/cb_more_opt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="多选操作"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@id/land_manager_rb_order"
+                style="@style/bottom_btn"
+                android:drawableLeft="@drawable/icon_order"
+                android:onClick="onSortOnClick"
+                android:text="  排    序"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@id/select_peo_rb_return"
+                style="@style/bottom_btn"
+                android:layout_alignParentRight="true"
+                android:drawableLeft="@drawable/icon_back"
+                android:onClick="onBackOnClick"
+                android:text="  返    回" />
+
+            <Button
+                android:id="@id/btn_case_delete"
+                style="@style/bottom_btn"
+                android:layout_toLeftOf="@id/select_peo_rb_return"
+                android:onClick="onSortOnClick"
+                android:text="删    除"
+                android:visibility="visible" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/vg_middle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/vg_bottom"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/vg_top"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginRight="20.0dip"
+        android:background="@drawable/bk_login_content_bk_2"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="16.0dip" >
+
+        <LinearLayout
+            android:id="@id/ll_query"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4.0dip"
+            android:visibility="gone" >
+
+            <EditText
+                android:id="@id/et_case_query"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/nav_search"
+                android:ems="10"
+                android:hint="地块查询" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@id/lst_case"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="#00000000" />
+    </LinearLayout>
+
+</RelativeLayout>

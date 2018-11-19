@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Mini SDCard Offline Data -->
+	<string name="config.data.sdcard.dir">
+       iGisQuery_LZ
+    </string>
+	<string name="config.data.sdcard.offline.dir">
+       offlinedata
+    </string>
+
+	<string name="config.basemap.name">
+	    basemap
+    </string>
+    <!-- Basemap  -->
+    <string name="config.basemap.dataframe.name">
+       Layers
+    </string>
+	<string name="config.teamareaslabel.name">
+	   Team Areas Labels
+	</string>
+	<string name="config.laserrangefinder.name">
+	   Laser Range Finder
+	</string>
+	<string name="config.found.name">
+	   Query Results
+	</string>
+</resources>

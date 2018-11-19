@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@drawable/tran"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@id/vg_area_content"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0"
+        android:background="@color/bk_gray_trans"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/bk_gray_trans_blod" >
+
+            <LinearLayout
+                android:id="@id/vg_query"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_alignBottom="@id/vg_right"
+                android:layout_alignParentLeft="true"
+                android:layout_alignTop="@id/vg_right"
+                android:layout_toLeftOf="@id/vg_right"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@id/btn_start_query"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:text="查询"
+                    android:textSize="12sp" />
+
+                <ImageButton
+                    android:id="@id/btn_query_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bk_narmal_1"
+                    android:src="@android:drawable/ic_menu_manage" />
+
+                <EditText
+                    android:id="@id/et_query"
+                    android:layout_width="0.0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:hint="请输入要查询的关键字"
+                    android:imeOptions="actionSearch"
+                    android:singleLine="true"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:id="@id/vg_lst_area"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <Button
+                    android:id="@id/btn_refresh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="刷新"
+                    android:visibility="gone" />
+
+                <ListView
+                    android:id="@id/lst_datas"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:cacheColorHint="@null"
+                    android:divider="@color/bk_gray_trans_2"
+                    android:dividerHeight="0.5dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/vg_lst_query"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <ExpandableListView
+                    android:id="@id/lst_datas_full_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:cacheColorHint="@null"
+                    android:divider="@color/bk_gray_trans_2"
+                    android:dividerHeight="0.5dip"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@id/vg_lst_show_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="visible" >
+
+                    <LinearLayout
+                        android:id="@id/vg_lst_show_details_top_control"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:orientation="horizontal"
+                        android:visibility="visible" >
+
+                        <Button
+                            android:id="@id/btn_pre"
+                            android:layout_width="0.0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.0"
+                            android:text="上一个"
+                            android:textSize="12sp" />
+
+                        <Button
+                            android:id="@id/btn_info"
+                            android:layout_width="0.0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.0"
+                            android:text="1/1"
+                            android:textSize="12sp" />
+
+                        <Button
+                            android:id="@id/btn_next"
+                            android:layout_width="0.0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.0"
+                            android:text="下一个"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <ListView
+                        android:id="@id/lst_datas_child_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        android:cacheColorHint="@null"
+                        android:divider="@color/bk_gray_trans_2"
+                        android:dividerHeight="0.5dip" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"                     
+                        android:layout_height="35dp"
+                        android:orientation="horizontal"
+                        android:visibility="visible" >
+
+                        <Button
+                            android:id="@id/btn_go_back_to_group"
+                            android:layout_width="0.0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.0"
+                            android:text="返    回"
+                            android:textSize="12sp" />
+
+                        <Button
+                            android:id="@id/btn_add_to_fav2"
+                            android:layout_width="0.0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.0"
+                            android:text="收藏"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <!-- <LinearLayout android:orientation="vertical" android:id="@id/vg_lst_query_setting" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent"> -->
+            <!-- <include android:layout_width="match_parent" android:layout_height="match_parent" layout="@layout/layout_layer_query_seting" /> -->
+            <!-- </LinearLayout> -->
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,120 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
+//    aaptOptions.cruncherEnabled = false
+//    aaptOptions.useNewCruncher = false
+    defaultConfig {
+        applicationId "com.guyu.android"
+        minSdkVersion 23
+        targetSdkVersion 28
+        versionCode 5
+        versionName "2.0"
+
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+
+        externalNativeBuild {
+            cmake {
+                cppFlags ""
+                arguments "-DANDROID_ARM_" +
+                        "EON=TRUE"
+            }
+        }
+        ndk {
+            abiFilters 'armeabi-v7a',  'x86' //, 'armeabi', 'mips', 'mips64','arm64-v8a', 'x86_64'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+    packagingOptions{
+        exclude'META-INF/DEPENDENCIES.txt'
+        exclude'META-INF/LICENSE.txt'
+        exclude'META-INF/NOTICE.txt'
+        exclude'META-INF/NOTICE'
+        exclude'META-INF/LICENSE'
+        exclude'META-INF/DEPENDENCIES'
+        exclude'META-INF/notice.txt'
+        exclude'META-INF/license.txt'
+        exclude'META-INF/dependencies.txt'
+        exclude'META-INF/LGPL2.1'
+    }
+
+    compileOptions{
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+
+    implementation 'com.android.support:multidex:1.0.1'
+
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+
+    implementation 'com.google.code.gson:gson:+'
+    implementation 'com.github.gcacace:signature-pad:+'
+    implementation 'com.blankj:utilcode:+'
+
+    implementation 'io.reactivex.rxjava2:rxjava:+'
+    implementation 'io.reactivex.rxjava2:rxandroid:+'
+    implementation 'com.squareup.retrofit2:retrofit:+'
+    implementation 'com.squareup.retrofit2:converter-gson:+'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:+'
+    implementation 'com.squareup.okhttp3:logging-interceptor:+'
+    implementation 'com.trello.rxlifecycle2:rxlifecycle:+'
+    implementation 'com.trello.rxlifecycle2:rxlifecycle-android:+'
+
+//    implementation 'com.github.bumptech.glide:glide:+'
+//    annotationProcessor 'com.github.bumptech.glide:implementationr:+'
+
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.42'
+
+    implementation group: 'org.bouncycastle', name: 'bcprov-jdk15on', version: '+'
+
+    implementation group: 'commons-codec', name: 'commons-codec', version: '+'
+    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '+'
+
+    implementation group: 'org.codehaus.jackson', name: 'jackson-core-lgpl', version: '+'
+    implementation group: 'org.codehaus.jackson', name: 'jackson-mapper-lgpl', version: '+'
+
+    implementation group: 'jcifs', name: 'jcifs', version: '+'
+
+    implementation group: 'com.itextpdf', name: 'itextpdf', version: '+'
+
+    implementation 'q.rorbin:badgeview:+'
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0-alpha'
+
+
+
+    implementation('com.github.gzu-liyujiang.AndroidPicker:WheelPicker:1.5.6') {
+        exclude group: 'com.android.support'
+    }
+
+    implementation 'com.github.lecho:hellocharts-android:v1.5.8'
+}
+
+
